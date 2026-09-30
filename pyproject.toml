@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alien-invaders"
+version = "1.0.0"
+description = "A Space Invaders style boss fight built with tkinter and Zelle's graphics.py"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "Zach" }]
+keywords = ["game", "tkinter", "space-invaders", "graphics.py"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Games/Entertainment :: Arcade",
+]
+dependencies = []
+
+[project.scripts]
+alien-invaders = "alien_invaders.game:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+alien_invaders = ["assets/screens/*.png", "assets/sprites/*.png"]
